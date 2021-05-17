@@ -1,0 +1,42 @@
+# List in long format, include dotfiles
+alias la="ls -la"
+
+# Go to real dir (i.e. if current dir is linked)
+alias cd.="cd $(readlink -f .)"
+alias mkdir="mkdir -pv"
+
+# Prevent spamming cd ..
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# QoL e rimanenze di OSx
+alias quit="exit"
+alias open="exo-open --launch FileManager"
+alias pacman="sudo pacman"
+alias yt="youtube-dl --add-metadata -i"
+
+# Youtube-DL
+alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
+alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
+
+# Print Path su linee separate
+alias path="echo $PATH | tr : '\n'"
+
+# cd to folders
+alias cdot="cd $DOT"
+alias cscr="cd $SCR"
+alias cyta="cd $YTA"
+alias cytv="cd $YTV"
+alias cspt="cd $DOT/script"
+
+# open to folders
+alias odot="open $DOT"
+alias oscr="open $SCR"
+alias oyta="open $YTA"
+alias oytv="open $YTV"
+
+# alias for opening editor and change dotfiles
+alias als="$EDITOR $DDT/.alias"
+alias inp="$EDITOR $DDT/.inputrc"
+alias bse="$EDITOR $DOT/.base"
