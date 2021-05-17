@@ -1,0 +1,22 @@
+# If not running interactively, don"t do anything
+[ -z "$PS1" ] && return
+
+# Change default values
+export PATH="$HOME/bin:$PATH";
+export EDITOR=/usr/bin/subl
+
+# Folders
+DOT=$HOME/Projects/dotfiles
+DDT=$DOT/dot
+SCR=$HOME/Pictures/screenshots
+YTV=$HOME/Videos/youtube-dl/video
+YTA=$HOME/Music/youtube-dl
+
+# Loads all dotfiles in projects/dotfiles eluding recursion
+for dot_f in $DDT/.*; do
+	# If found is "File" then sources it
+	[[ -f $dot_f ]] && source $dot_f
+done
+
+# sets tab case insensitive
+bind 'set completion-ignore-case on'
