@@ -14,9 +14,10 @@ alias ....="cd ../../.."
 alias quit="exit"
 alias open="exo-open --launch FileManager"
 alias pacman="sudo pacman"
-alias yt="youtube-dl --add-metadata -i"
+alias xlsx="ssconvert "
 
 # Youtube-DL
+alias yt="youtube-dl --add-metadata -i"
 alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
 alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
 
