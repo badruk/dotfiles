@@ -14,7 +14,7 @@ alias ....="cd ../../.."
 alias quit="exit"
 alias open="exo-open --launch FileManager"
 alias pacman="sudo pacman"
-alias xlsx="ssconvert "
+alias cpb=" xclip -selection c"
 
 # Youtube-DL
 alias yt="youtube-dl --add-metadata -i"
@@ -22,7 +22,7 @@ alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
 alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
 
 # Print Path su linee separate
-alias path="echo $PATH | tr : '\n'"
+alias print_path="echo $PATH | tr : '\n'"
 
 # cd to folders
 alias cdot="cd $DOT"
