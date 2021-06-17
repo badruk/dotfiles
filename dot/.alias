@@ -14,12 +14,19 @@ alias ....="cd ../../.."
 alias quit="exit"
 alias open="exo-open --launch FileManager"
 alias pacman="sudo pacman"
+alias syu="pacman -Syu"
 alias cpb=" xclip -selection c"
+alias battlescribe="cd /home/badruk/Documents/battlescribe && ./RosterEditor.sh"
 
-# Youtube-DL
+# Youtubebe-DL
 alias yt="youtube-dl --add-metadata -i"
 alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
 alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
+alias towatch="$VST/towatch/move_to_watch.sh"
+
+# Conda
+alias cact="conda activate"
+alias GoL="cact GoL && cvst && cd game_of_life"
 
 # Print Path su linee separate
 alias print_path="echo $PATH | tr : '\n'"
@@ -29,13 +36,16 @@ alias cdot="cd $DOT"
 alias cscr="cd $SCR"
 alias cyta="cd $YTA"
 alias cytv="cd $YTV"
-alias cspt="cd $DOT/script"
+alias cvst="cd $VST"
+alias cswt="cd $SWT"
 
 # open to folders
 alias odot="open $DOT"
 alias oscr="open $SCR"
 alias oyta="open $YTA"
 alias oytv="open $YTV"
+alias ovst="open $VST"
+alias oswt="open $SWT"
 
 # alias for opening editor and change dotfiles
 alias als="$EDITOR $DDT/.alias"
