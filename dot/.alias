@@ -11,10 +11,14 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # QoL e rimanenze di OSx
+alias ping='ping -c 10'
 alias quit="exit"
-alias open="exo-open --launch FileManager"
+# alias open="exo-open --launch FileManager" # For XFCE
+alias open="xdg-open" # For KDE 
+
 alias pacman="sudo pacman"
 alias syu="pacman -Syu"
+alias SYU="yay -Syu"
 alias cpb=" xclip -selection c"
 alias battlescribe="cd /home/badruk/Documents/battlescribe && ./RosterEditor.sh"
 
