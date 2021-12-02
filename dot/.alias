@@ -19,13 +19,18 @@ alias open="xdg-open" # For KDE
 alias pacman="sudo pacman"
 alias syu="pacman -Syu"
 alias SYU="yay -Syu"
-alias cpb=" xclip -selection c"
+alias syur="pacman -R"
+alias syuclean="pacman -Scc"
+alias tpb=" xclip -selection c"
 alias battlescribe="cd /home/badruk/Documents/battlescribe && ./RosterEditor.sh"
+alias meteo="curl https://wttr.in/Carrara"
 
 # Youtubebe-DL
-alias yt="youtube-dl --add-metadata -i"
+# alias yt="yt-dlp --add-metadata -i -S res,ext:mp4:m4a --recode mp4"
+alias yt="yt-dlp --add-metadata -i "
 alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
 alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
+alias ytap="yt --extract-audio --audio-format mp3 -o '$YTA/%(playlist_index)s-%(title)s.%(ext)s' "
 alias towatch="$VST/towatch/move_to_watch.sh"
 
 # Conda
