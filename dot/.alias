@@ -1,5 +1,7 @@
 # List in long format, include dotfiles
+alias lh="ls -lh"
 alias la="ls -la"
+alias fdu="du -sh * | sort -h"
 
 # Go to real dir (i.e. if current dir is linked)
 alias cd.="cd $(readlink -f .)"
@@ -13,6 +15,7 @@ alias ....="cd ../../.."
 # QoL e rimanenze di OSx
 alias ping='ping -c 10'
 alias quit="exit"
+
 # alias open="exo-open --launch FileManager" # For XFCE
 alias open="xdg-open" # For KDE 
 
@@ -24,10 +27,14 @@ alias syuclean="pacman -Scc"
 alias tpb=" xclip -selection c"
 alias battlescribe="cd /home/badruk/Documents/battlescribe && ./RosterEditor.sh"
 alias meteo="curl https://wttr.in/Carrara"
+alias sens="sensors | grep Core"
+alias condalist="conda info --envs"
+alias passwordwifi="nmcli device wifi show-password"
+alias lockscreen="/home/badruk/Projects/VST/lockscreen/screenlock.sh"
 
 # Youtubebe-DL
-# alias yt="yt-dlp --add-metadata -i -S res,ext:mp4:m4a --recode mp4"
-alias yt="yt-dlp --add-metadata -i "
+# alias yt="yt-dlp --add-metadata -i -S res,ext:mp4:m4a --recode mp4" yt-dlp chooses the best combination rather than the highest bitrate, for this reason mp4 is not the default choice
+alias yt="yt-dlp --add-metadata -i --trim-filenames 150 "
 alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
 alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
 alias ytap="yt --extract-audio --audio-format mp3 -o '$YTA/%(playlist_index)s-%(title)s.%(ext)s' "
@@ -60,3 +67,23 @@ alias oswt="open $SWT"
 alias als="$EDITOR $DDT/.alias"
 alias inp="$EDITOR $DDT/.inputrc"
 alias bse="$EDITOR $DOT/.base"
+
+
+
+
+##### Functions
+hist_clean(){
+
+  # Get the current history number
+  n=$(history 1 | awk '{print $1}')
+
+  # Call histdel with the appropriate range
+  hist_fdel $(( $n - $1 )) $(( $n - 1 ))
+  }
+
+hist_fdel(){
+  for h in $(seq $1 $2); do
+    history -d $1
+  done
+  history -d $(history 1 | awk '{print $1}')
+  }
