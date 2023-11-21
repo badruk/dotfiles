@@ -13,6 +13,7 @@ SCR=$HOME/Pictures/screenshots
 YTV=$HOME/Videos/youtube-dl
 YTA=$HOME/Music/youtube-dl
 SWT='/run/user/1000/gvfs/mtp\:host\=Huami_Amazfit_Pace_a89d110a/Memoria\ interna/Music/'
+DATA='/mnt/AAB85265B8522FD5'
 
 # Loads all dotfiles in projects/dotfiles eluding recursion
 for dot_f in $DDT/.*; do

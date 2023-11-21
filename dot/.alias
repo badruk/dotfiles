@@ -18,7 +18,7 @@ alias quit="exit"
 
 # alias open="exo-open --launch FileManager" # For XFCE
 alias open="xdg-open" # For KDE 
-
+alias fastcli="fast --upload --single-line"
 alias pacman="sudo pacman"
 alias syu="pacman -Syu"
 alias SYU="yay -Syu"
@@ -39,10 +39,12 @@ alias yta="yt --extract-audio --audio-format mp3 -o '$YTA/%(title)s.%(ext)s'"
 alias ytv="yt -o '$YTV/%(title)s.%(ext)s'"
 alias ytap="yt --extract-audio --audio-format mp3 -o '$YTA/%(playlist_index)s-%(title)s.%(ext)s' "
 alias towatch="$VST/towatch/move_to_watch.sh"
+alias wty="yt -o '/home/badruk/Desktop/%(title)s.%(ext)s' "
 
 # Conda
 alias cact="conda activate"
 alias GoL="cact GoL && cvst && cd game_of_life"
+alias crepetti="cact IISMR && cd Projects/IISMR && subl ."
 
 # Print Path su linee separate
 alias print_path="echo $PATH | tr : '\n'"
@@ -54,6 +56,7 @@ alias cyta="cd $YTA"
 alias cytv="cd $YTV"
 alias cvst="cd $VST"
 alias cswt="cd $SWT"
+alias cdata="cd $DATA"
 
 # open to folders
 alias odot="open $DOT"
@@ -62,13 +65,12 @@ alias oyta="open $YTA"
 alias oytv="open $YTV"
 alias ovst="open $VST"
 alias oswt="open $SWT"
+alias odata="open $DATA"
 
 # alias for opening editor and change dotfiles
 alias als="$EDITOR $DDT/.alias"
 alias inp="$EDITOR $DDT/.inputrc"
 alias bse="$EDITOR $DOT/.base"
-
-
 
 
 ##### Functions

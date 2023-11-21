@@ -138,6 +138,7 @@ ex ()
 }
 
 source $HOME/Projects/dotfiles/.base
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/badruk/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -153,3 +154,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+source /usr/share/nvm/init-nvm.sh
+
+#Latex
+PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH; 
+export PATH MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH; 
+export MANPATH INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH; 
+export INFOPATH
